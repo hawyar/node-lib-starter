@@ -4,9 +4,7 @@
  *	@return {number} - the sum of x and y
  */
 function add(x, y) {
-	return x + y;
+  return x + y
 }
 
-export {
-	add
-}
+export { add }

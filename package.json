@@ -1,28 +1,25 @@
 {
-  "name": "esm-pkg",
+  "name": "node-esm-starter",
   "version": "1.0.0",
-  "description": "Base esm pkg",
+  "description": "My Node.js starter",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "tap --no-coverage --reporter=specy -J --color",
-    "coverage": "npm test -- --coverage-report=html",
-    "lint": "eslint . --ext .js",
     "build:docs": "rm -rf docs && jsdoc index.js -t ./node_modules/foodoc/template -d docs -r -e utf8 --readme README.md -c conf.json",
     "serve:docs": " rm -rf docs && npm run build:docs && node static",
-    "build:node": "esbuild index.js --format=cjs --bundle --platform=node,--outdir=build --minify",
-    "build:binary": "pkg index.js -o build/parser",
-    "build": "npm run build:node && npm run build:binary"
+    "build:node": "esbuild index.js --format=cjs --bundle --platform=node --outfile=build/index.min.js --minify",
+    "build:exec": "pkg index.js -o build/index-exec",
+    "build": "npm run build:node && npm run build:exec"
   },
   "author": "hawyar",
-  "dependencies": {
-    "esbuild": "^0.12.20"
-  },
   "devDependencies": {
+    "esbuild": "^0.13.4",
     "finalhandler": "^1.1.2",
     "foodoc": "^0.0.9",
     "jsdoc": "^3.6.7",
     "pkg": "^5.3.1",
     "tap": "^15.0.9"
-  }
+  },
+  "license": "MIT"
 }

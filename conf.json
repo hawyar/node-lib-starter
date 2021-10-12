@@ -2,7 +2,7 @@
 	"plugins": 	["plugins/markdown"],
 	"templates": {
     "systemName"			: "My pkg",
-    "systemSummary"			: "More description",
+    "systemSummary"			: "More description here",
 	"systemColor"			: "#0A1931",
     "footer"				: "hawyar",
     "includeDate"			: true,

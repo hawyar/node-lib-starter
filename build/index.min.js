@@ -1,0 +1,1 @@
+var d=Object.defineProperty;var e=n=>d(n,"__esModule",{value:!0});var o=(n,r)=>{e(n);for(var t in r)d(n,t,{get:r[t],enumerable:!0})};o(exports,{add:()=>u});function u(n,r){return n+r}0&&(module.exports={add});

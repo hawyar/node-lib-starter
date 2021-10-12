@@ -1,7 +1,7 @@
 import * as tap from 'tap'
-
+import { add } from './index.js'
 
 tap.test('Pass thru', (t) => {
-	t.pass('Passing')
-	t.end()
+  t.equal(add(1, 2), 3)
+  t.end()
 })
