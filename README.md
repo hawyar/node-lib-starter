@@ -2,7 +2,7 @@
 
 > My Node.js ESModules starter that I use often
 
-![tests](https://github.com/hawyar/node-esm-starter/actions/workflows/test.yaml/badge.svg)
+![tests](https://github.com/hawyar/node-esm-starter/actions/workflows/test.yml/badge.svg)
 
 ## Usage
 `Use this as template` or
