@@ -24,6 +24,13 @@ and to preview docs locally
 npm run serve:docs
 ```
 
+Generate types from JSDoc
+
+```bash
+npm run generate:types
+```
+
+
 ## Testing
 
 Using [tap](https://node-tap.org/) for testing
@@ -51,11 +58,6 @@ or build all
 npm run build
 ```
 
-## Build
 
-Generate types from JSDoc
 
-```bash
-npm run generate:types
-```
 
