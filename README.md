@@ -1,48 +1,61 @@
-# Node.js ESM Starter
+# Node.js lib starter
 
 
-> Minimal starter I use for Node.js scripts or packages
+> Minimal starter for Node.js scripts or packages
 
 ![tests](https://github.com/hawyar/node-lib-starter/actions/workflows/test.yml/badge.svg)
 
 ## Usage
-Use as tempalte (green button) or just
+Use as template (green button) or just
 
 ```bash
-git clone https://github.com/hawyar/node-esm-starter.git
+git clone https://github.com/hawyar/node-lib-starter.git
 ```
 
 ## Doc
-Using [JSDoc](https://jsdoc.app/index.html) for documentation
 
 ```bash
-npm run build:docs
+npm run generate:docs
 ```
 
-and to preview docs on 
+and to preview docs locally 
+
 ```bash
 npm run serve:docs
 ```
 
-
 ## Testing
-- [tap](https://node-tap.org/) for testing
+
+Using [tap](https://node-tap.org/) for testing
+
 ```bash
 npm run test
 ```
 
 ## Build
-- [esbuild](https://esbuild.github.io/) for bundling JS
+
+Using [esbuild](https://esbuild.github.io/) for bundling JS
+
 ```bash
 npm run build:node
 ```
-- [pkg](https://github.com/vercel/pkg) for packaging the JS files into an executable
+
+and [pkg](https://github.com/vercel/pkg) for packaging the JS files into an executable
+
 ```bash
 npm run build:exec
 ```
-
-or you can do both in one go
+or build all
 
 ```bash
 npm run build
 ```
+
+## Build
+
+Generate types from JSDoc
+
+```bash
+npm run generate:types
+```
+
