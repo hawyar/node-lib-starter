@@ -1,27 +1,29 @@
 # Node.js ESM Starter
 
-> My Node.js ESModules starter that I use often
 
-![tests](https://github.com/hawyar/node-esm-starter/actions/workflows/test.yml/badge.svg)
+> Minimal starter I use for Node.js scripts or packages
+
+![tests](https://github.com/hawyar/node-lib-starter/actions/workflows/test.yml/badge.svg)
 
 ## Usage
-`Use this as template` or
+Use as tempalte (green button) or just
 
 ```bash
 git clone https://github.com/hawyar/node-esm-starter.git
 ```
 
 ## Doc
-- [JSDoc](https://jsdoc.app/index.html) for generating docs
+Using [JSDoc](https://jsdoc.app/index.html) for documentation
 
 ```bash
 npm run build:docs
 ```
 
-It also includes a local server for previewing the docs.
+and to preview docs on 
 ```bash
 npm run serve:docs
 ```
+
 
 ## Testing
 - [tap](https://node-tap.org/) for testing
