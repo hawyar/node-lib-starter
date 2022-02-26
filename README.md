@@ -1,63 +1,37 @@
-# Node.js lib starter
-
-
-> Minimal starter for Node.js scripts or packages
+## Node.js lib starter
 
 ![tests](https://github.com/hawyar/node-lib-starter/actions/workflows/test.yml/badge.svg)
 
+> Often I find myself setting something similar for scripts or libs. This is an opinionated starter
+
 ## Usage
-Use as template (green button) or just
+
+Use as template (green button) or just clone it
 
 ```bash
-git clone https://github.com/hawyar/node-lib-starter.git
+git clone https://github.com/hawyar/node-lib-starter.git your_lib_name
 ```
 
-## Doc
+### Test
 
-```bash
-npm run generate:docs
-```
-
-and to preview docs locally 
-
-```bash
-npm run serve:docs
-```
-
-Generate types from JSDoc
-
-```bash
-npm run generate:types
-```
-
-
-## Testing
-
-Using [tap](https://node-tap.org/) for testing
+Tests using [tap](https://node-tap.org/)
 
 ```bash
 npm run test
 ```
 
-## Build
+### Docs
 
-Using [esbuild](https://esbuild.github.io/) for bundling JS
-
-```bash
-npm run build:node
-```
-
-and [pkg](https://github.com/vercel/pkg) for packaging the JS files into an executable
+Docs generated using [jsodc](https://jsdoc.app/)
 
 ```bash
-npm run build:exec
+npm run generate:docs
 ```
-or build all
+
+### Build
+
+Bundle to CommonJS and ES Module using [esbuild](https://esbuild.github.io/). Package JS files into an executable with [pkg](https://github.com/vercel/pkg)
 
 ```bash
 npm run build
 ```
-
-
-
-

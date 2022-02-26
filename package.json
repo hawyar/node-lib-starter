@@ -1,22 +1,29 @@
 {
   "name": "node-lib-starter",
   "version": "1.0.0",
-  "description": "My Node.js starter",
-  "main": "index.js",
+  "description": "Node.js lib starter for scripts or packages",
+  "author": "hawyar",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "test": "tap --no-coverage --reporter=specy -J --color",
-    "build:docs": "rm -rf docs && jsdoc lib/*.js -t ./node_modules/foodoc/template -d docs -r -e utf8 --readme README.md -c conf.json",
-    "generate:docs": "rm -rf docs && jsdoc lib/*.js -t ./node_modules/foodoc/template -d docs -r -e utf8 -c conf.json -R README.md",
-    "generate:types": "tsc",
-    "build:cjs": "esbuild lib/index.js --format=cjs --bundle --platform=node --outfile=build/index.csj.js",
-    "build:esm": "esbuild lib/index.js --format=esm --bundle --platform=node --outfile=build/index.esm.js",
-    "build:exec": "pkg lib/index.js -o build/index-exec",
-    "build": "npm run build:cjs && npm run build:esm && npm run build:exec",
     "lint": "eslint --ext .js,.json lib/*.js",
-    "serve:docs": "rm -rf docs && npm run generate:docs && statikk docs --port 4242 --open"
+    "build:cjs": "esbuild lib/index.js --minify --format=cjs --bundle --platform=node --outfile=dist/index.js",
+    "build:esm": "esbuild lib/index.js --minify --format=esm --bundle --platform=node --outfile=dist/index.mjs",
+    "build:exec": "pkg -t node14-macos-x64 dist/index.js -o build/index",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:exec",
+    "serve:docs": "rm -rf docs && npm run generate:docs && statikk docs --port 4242 --open",
+    "generate:docs": "rm -rf docs && jsdoc lib/*.js -t ./node_modules/foodoc/template -d docs -r -e utf8 -c conf.json -R README.md",
+    "generate:types": "tsc"
   },
-  "author": "hawyar",
+  "exports": {
+    ".": {
+      "default": {
+        "require": "./dist/index.js",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
   "devDependencies": {
     "esbuild": "^0.13.4",
     "foodoc": "^0.0.9",
