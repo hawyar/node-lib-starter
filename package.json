@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js,.json lib/*.js",
     "build:cjs": "esbuild lib/index.js --minify --format=cjs --bundle --platform=node --outfile=dist/index.js",
     "build:esm": "esbuild lib/index.js --minify --format=esm --bundle --platform=node --outfile=dist/index.mjs",
-    "build:exec": "pkg -t node14-macos-x64 dist/index.js -o build/index",
+    "build:exec": "pkg -t node14-macos-x64 dist/index.js -o dist/index",
     "build": "npm run build:cjs && npm run build:esm && npm run build:exec",
     "serve:docs": "rm -rf docs && npm run generate:docs && statikk docs --port 4242 --open",
     "generate:docs": "rm -rf docs && jsdoc lib/*.js -t ./node_modules/foodoc/template -d docs -r -e utf8 -c conf.json -R README.md",

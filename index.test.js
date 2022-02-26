@@ -1,7 +1,7 @@
-import * as tap from 'tap'
-import { add } from './lib/index.js'
+import * as tap from "tap"
+import { add } from "./lib/index.js"
 
-tap.test('Pass thru', (t) => {
+tap.test("Pass thru", (t) => {
   t.equal(add(1, 2), 3)
   t.end()
 })
